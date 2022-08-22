@@ -1,0 +1,5 @@
+FROM node:17.0.0
+
+WORKDIR /src
+
+EXPOSE 3000

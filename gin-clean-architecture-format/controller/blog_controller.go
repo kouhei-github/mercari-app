@@ -9,7 +9,7 @@ import (
 )
 
 func ShowHelloWorld(c *gin.Context) {
-	c.JSON(200, "Hello World !!")
+	c.JSON(200, "Hello Gin App on Docker.")
 }
 
 func ShowAllBlog(c *gin.Context) {

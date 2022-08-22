@@ -13,13 +13,26 @@ services:
       - "8080:8080"
     depends_on:
       - "db"
-
+    
+  node:
+    build:
+      context: .
+      dockerfile: ./docker/front/Dockerfile
+    volumes:
+      - ./nuxt-dashboard:/src
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - '3000:3000'
+      - '24678:24678' # 追加
+      -
   db:
     image: mysql:5.7
     container_name: mysql_host # phpMyAdminサービスのPMA_HOSTSに設定する
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mercari_app_gin
+      MYSQL_DATABASE: mercari_app_gin_golang
       MYSQL_USER: magamatsu
       MYSQL_PASSWORD: kanFUjbe(h{{hGG
       TZ: 'Asia/Tokyo'
