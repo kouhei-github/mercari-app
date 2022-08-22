@@ -1,0 +1,47 @@
+version: '3'
+services:
+  go:
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    command: air -c .air.toml
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./gin-clean-architecture-format:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "db"
+
+  db:
+    image: mysql:5.7
+    container_name: mysql_host # phpMyAdminサービスのPMA_HOSTSに設定する
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mercari_app_gin
+      MYSQL_USER: magamatsu
+      MYSQL_PASSWORD: kanFUjbe(h{{hGG
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
+
+  # phpMyAdmin
+  phpmyadmin:
+    container_name: test_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=mysql_host
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    ports:
+      - "8081:80"
+
+volumes:
+  db-data:
+    driver: local
