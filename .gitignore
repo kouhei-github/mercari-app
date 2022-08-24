@@ -130,4 +130,5 @@ nuxt-dashboard/.pnp.*
 
 # Docker
 docker/db/data
-gin-clean-architecture-format/tmp
+gin-clean-architecture-format/tmp/main
+gin-clean-architecture-format/tmp/*.log
