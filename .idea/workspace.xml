@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25ed377c-c4f3-414d-b7ed-9d6a1aa5555a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/service/my_error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nuxt-dashboard/components/dashboard/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nuxt-dashboard/components/dashboard/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/auto.cnf" beforeDir="false" />
@@ -17,12 +20,11 @@
       <change beforePath="$PROJECT_DIR$/docker/db/data/ib_logfile0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/ib_logfile1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/ibdata1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/db/data/ibtmp1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/db/data/mercari_app_gin/blog_entities.frm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/db/data/mercari_app_gin/blog_entities.ibd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/db/data/mercari_app_gin/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/mercari_app_gin_golang/blog_entities.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/mercari_app_gin_golang/blog_entities.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/mercari_app_gin_golang/db.opt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/mysql.sock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/db/data/mysql/columns_priv.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/data/mysql/columns_priv.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-dashboard/assets/css/tailwind.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/mysql/columns_priv.MYI" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/mysql/columns_priv.frm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/mysql/db.MYD" beforeDir="false" />
@@ -297,14 +299,89 @@
       <change beforePath="$PROJECT_DIR$/docker/db/data/sys/x@0024waits_by_user_by_latency.frm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/db/data/sys/x@0024waits_global_by_latency.frm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/front/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/front/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/controller/blog_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/blog_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/tmp/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/blog_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/blog_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/route/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/route/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/golang/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.husky/commit-msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.husky/post-merge" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.husky/pre-commit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.stackblitzrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/app.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/assets/images/preview.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/assets/images/preview_mobile.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/assets/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/assets/sass/vendor.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/commitlint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/ActionSheet/Body.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/ActionSheet/Header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/ActionSheet/Overlay.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/ActionSheet/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Anchor.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Builder/Navbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Button.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Dashboard/Navbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Dashboard/Sidebar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Form/TextInput.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/LanguageSwitcher.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Body.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Footer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Navbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Section/Title.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Section/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Title.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/Page/Wrapper.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/components/ThemeSwitcher.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/composables/useLang.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/composables/useSticky.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/composables/useSyncProps.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/layouts/dashboard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/layouts/page.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/locales/en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/locales/id.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/locales/ja.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/nuxt.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/pages/about.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/pages/blank.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/pages/dashboard/about.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/pages/dashboard/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt-dashboard/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/pages/test.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/plugins/navbar.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/sandbox.config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/stores/counter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/stores/identity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/utils/app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/utils/lang.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/utils/theme.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/windi.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt-dashboard/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file://$USER_HOME$/go/go1.18" />
   <component name="Git.Settings">
@@ -319,26 +396,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/nagamatsu-ko/docker/golang/mercari-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nagamatsu-ko/docker/golang/mercari-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/nagamatsu-ko/Library/Application Support/JetBrains/Toolbox/apps/Goland/ch-0/222.3739.57/GoLand.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nuxt-dashboard" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />

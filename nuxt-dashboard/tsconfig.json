@@ -1,13 +1,4 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "strict": true,
-    "types": [
-      "nuxt-windicss",
-      "@vueuse/nuxt",
-      "@intlify/nuxt3",
-      "@pinia/nuxt"
-    ]
-  }
+  "extends": "./.nuxt/tsconfig.json"
 }

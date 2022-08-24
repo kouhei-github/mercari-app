@@ -1,13 +1,8 @@
-*.log
-nuxt.d.ts
-
-# private config
-.env
-
-# deps
 node_modules
-
-# build or generate
+*.log*
 .nuxt
-dist
+.nitro
+.cache
 .output
+.env
+dist
