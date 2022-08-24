@@ -24,7 +24,7 @@ func NewBlogEntity(title string, body string) (*BlogEntity, error) {
 	return &BlogEntity{Title: title, Body: body}, nil
 }
 
-func (blog *BlogEntity) CreateBlogEntity() error {
+func (blog *BlogEntity) Create() error {
 	result := db.Create(blog)
 	if result.Error != nil {
 		return result.Error

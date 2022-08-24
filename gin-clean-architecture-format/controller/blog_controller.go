@@ -37,7 +37,7 @@ func InsertBlog(c *gin.Context) {
 	}
 
 	// 作成
-	err = entity.CreateBlogEntity()
+	err = entity.Create()
 	if err != nil {
 		c.JSON(500, err)
 		return
