@@ -129,4 +129,4 @@ nuxt-dashboard/.yarn/install-state.gz
 nuxt-dashboard/.pnp.*
 
 # Docker
-'docker/db/data
+docker/db/data
