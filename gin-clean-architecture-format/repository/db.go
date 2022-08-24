@@ -19,5 +19,11 @@ func init() {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	db.AutoMigrate(&BlogEntity{})
+	db.AutoMigrate(
+		&BlogEntity{},
+		&MerchandiseEntity{},
+		&CategoryEntity{},
+		&AuthenticationEntity{},
+		&DeliveryEntity{},
+	)
 }
