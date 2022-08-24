@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25ed377c-c4f3-414d-b7ed-9d6a1aa5555a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/authentication_model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/category_model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/delivery_model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/merchandise_model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/db.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
