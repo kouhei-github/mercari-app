@@ -1,67 +1,46 @@
 package controller
 
 import (
-	"fmt"
-	"kouhei-github/sample-gin/repository"
-	"strconv"
-
 	"github.com/gin-gonic/gin"
+	"kouhei-github/sample-gin/repository"
 )
 
 func ShowHelloWorld(c *gin.Context) {
 	c.JSON(200, "Hello Gin App on Docker.")
 }
 
-func ShowAllBlog(c *gin.Context) {
-	datas := repository.GetAll()
-	c.JSON(200, datas)
-}
+func InsertBlog(c *gin.Context) {
+	var requestBody repository.BlogEntity
+	// リクエストボディを構造体に格納
+	err := c.ShouldBindJSON(&requestBody)
+	if err != nil {
+		c.JSON(500, err)
+		return
+	}
+	// BlogEntity構造体の生成
+	entity, err := repository.NewBlogEntity(requestBody.Title, requestBody.Body)
+	if err != nil {
+		c.JSON(500, err)
+		return
+	}
 
-func ShowOneBlog(c *gin.Context) {
-	id, _ := strconv.Atoi(c.Param("id"))
-	data := repository.GetOne(id)
-	c.JSON(200, data)
-}
+	// タイトルが既に存在しないか確認
+	entities, err := entity.FindByTitle()
 
-func ShowCreateBlog(c *gin.Context) {
-	c.JSON(200, "Done")
-}
+	if err != nil {
+		c.JSON(500, err)
+		return
+	}
+	if len(entities) > 0 {
+		c.JSON(500, "タイトルが既に存在してます")
+		return
+	}
 
-func CreateBlog(c *gin.Context) {
-	title := c.PostForm("title")
-	body := c.PostForm("body")
-	data := repository.BlogEntity{Title: title, Body: body}
-	data.Create()
-	c.JSON(200, data)
-}
-
-func ShowEditBlog(c *gin.Context) {
-	id, _ := strconv.Atoi(c.Param("id"))
-	data := repository.GetOne(id)
-	c.JSON(200, data)
-}
-
-func EditBlog(c *gin.Context) {
-	id, _ := strconv.Atoi(c.PostForm("id"))
-	data := repository.GetOne(id)
-	title := c.PostForm("title")
-	data.Title = title
-	body := c.PostForm("body")
-	data.Body = body
-	data.Update()
-	c.JSON(200, data)
-}
-
-func ShowCheckDeleteBlog(c *gin.Context) {
-	id, _ := strconv.Atoi(c.Param("id"))
-	data := repository.GetOne(id)
-	c.JSON(200, data)
-}
-
-func DeleteBlog(c *gin.Context) {
-	id, _ := strconv.Atoi(c.PostForm("id"))
-	fmt.Println("delete:", id)
-	data := repository.GetOne(id)
-	data.Delete()
-	c.JSON(200, data)
+	// 作成
+	err = entity.CreateBlogEntity()
+	if err != nil {
+		c.JSON(500, err)
+		return
+	}
+	c.JSON(201, "Insert Completed")
 }
