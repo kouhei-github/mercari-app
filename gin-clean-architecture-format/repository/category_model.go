@@ -7,8 +7,8 @@ import (
 
 type CategoryEntity struct {
 	gorm.Model
-	Name             string `json:"name" binding:"required"`
-	CategoryRakumaId int    `json:"category_rakuma_id"  binding:"required"`
+	Name             string `json:"name"`
+	CategoryRakumaId int    `json:"category_rakuma_id"  gorm:"unique"`
 }
 
 func NewCategoryEntity(name string, rakumaCategoryId int) *CategoryEntity {
@@ -25,4 +25,36 @@ func (category *CategoryEntity) Create() error {
 		return myErr
 	}
 	return nil
+}
+
+func CreateCategoryList(categories []CategoryEntity) error {
+	result := db.Create(&categories)
+	if result.Error != nil {
+		myErr := service.MyError{
+			Message: result.Error.Error(),
+		}
+		return myErr
+	}
+	return nil
+}
+
+func FindByCategoryId(id uint) (CategoryEntity, error) {
+	entity := CategoryEntity{}
+	entity.ID = id
+	result := db.First(&entity)
+	if result.Error != nil {
+		err := service.MyError{Message: result.Error.Error()}
+		return CategoryEntity{}, err
+	}
+	return entity, nil
+}
+
+func FindByCategoryName(name string) (*CategoryEntity, error) {
+	var entity CategoryEntity
+	result := db.Where("name = ?", name).First(&entity)
+	if result.Error != nil {
+		err := service.MyError{Message: result.Error.Error()}
+		return &CategoryEntity{}, err
+	}
+	return &entity, nil
 }

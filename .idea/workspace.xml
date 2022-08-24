@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25ed377c-c4f3-414d-b7ed-9d6a1aa5555a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/authentication_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/category_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/implements.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/command/upload_rakuma.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/delivery_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/merchandise_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/controller/blog_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/blog_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/authentication_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/authentication_model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/blog_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/blog_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/controller/category_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/category_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/category_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/category_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/delivery_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/delivery_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/merchandise_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/merchandise_model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/route/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/route/router.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
