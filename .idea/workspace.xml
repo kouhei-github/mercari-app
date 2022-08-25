@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25ed377c-c4f3-414d-b7ed-9d6a1aa5555a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/H-10781.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/command/test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/controller/rakuma_upload.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/service/image_download.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/service/upload.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/usecase/UploadToRakumaUseCase.go" afterDir="false" />
+    <list default="true" id="25ed377c-c4f3-414d-b7ed-9d6a1aa5555a" name="Changes" comment="1. 自動出品ができるエンドポイントを作成した。&#10;2. UseCaseとサービスにロジックを切り分けた。">
+      <change afterPath="$PROJECT_DIR$/gin-clean-architecture-format/config.ini.sample" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/command/upload_rakuma.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/authentication_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/authentication_model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/repository/merchandise_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/repository/merchandise_model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/route/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/gin-clean-architecture-format/route/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gin-clean-architecture-format/H-10781.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +77,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1. 自動出品ができるエンドポイントを作成した。&#10;2. UseCaseとサービスにロジックを切り分けた。" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 自動出品ができるエンドポイントを作成した。&#10;2. UseCaseとサービスにロジックを切り分けた。" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
