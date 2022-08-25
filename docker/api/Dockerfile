@@ -5,5 +5,5 @@ WORKDIR /app
 
 RUN go get github.com/cosmtrek/air@v1.29.0
 
-ADD ./golang/go.mod /app
+ADD ./gin-clean-architecture-format/go.mod /app
 RUN go mod download
