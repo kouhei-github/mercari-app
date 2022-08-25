@@ -32,10 +32,10 @@ services:
     image: mysql:5.7
     container_name: mysql_host # phpMyAdminサービスのPMA_HOSTSに設定する
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mercari_app_gin_golang
-      MYSQL_USER: magamatsu
-      MYSQL_PASSWORD: kanFUjbe(h{{hGG
+      MYSQL_ROOT_PASSWORD: ${ROOTPASS}
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_USER: ${USERNAME}
+      MYSQL_PASSWORD: ${USERPASS}
       TZ: 'Asia/Tokyo'
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
@@ -52,7 +52,7 @@ services:
       - PMA_ARBITRARY=1
       - PMA_HOSTS=mysql_host
       - PMA_USER=root
-      - PMA_PASSWORD=root
+      - PMA_PASSWORD=${ROOTPASS}
     ports:
       - "8081:80"
 
