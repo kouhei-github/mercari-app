@@ -36,7 +36,7 @@ func (authentication *AuthenticationEntity) Create() error {
 func (authentication *AuthenticationEntity) Update() error {
 	token := authentication.Token
 	cookie := authentication.Cookie
-	
+
 	// レコードが存在するか確認
 	result := db.First(authentication)
 	if result.Error != nil {
@@ -52,6 +52,15 @@ func (authentication *AuthenticationEntity) Update() error {
 	if result.Error != nil {
 		err := service.MyError{Message: result.Error.Error()}
 		return err
+	}
+	return nil
+}
+
+func (authentication *AuthenticationEntity) FindByLatest() error {
+	result := db.First(authentication)
+	if result.Error != nil {
+		myErr := service.MyError{Message: result.Error.Error()}
+		return myErr
 	}
 	return nil
 }

@@ -26,6 +26,9 @@ func GetRouter() *gin.Engine {
 	r.POST("/api/v1/merchandise", controller.CreateMerchandiseHandler)
 	r.POST("/api/v1/merchandise-batch", controller.BulkInsertMerchandiseHandler)
 	r.PUT("/api/v1/merchandise-batch", controller.BulkUpdateMerchandiseHandler)
+
+	// ラクマ UPLOAD
+	r.POST("/api/v1/upload-to-rakuma", controller.UploadToRakumaHandler)
 	//r.GET("/all", controller.ShowAllBlog)
 	//r.GET("/show/:id", controller.ShowOneBlog)
 	//r.GET("/create", controller.ShowCreateBlog)
