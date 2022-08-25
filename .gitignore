@@ -137,3 +137,4 @@ gin-clean-architecture-format/config.ini
 docker-compose.yml
 nginx-proxy/data
 nginx-proxy/mysql
+nginx-proxy/letsencrypt
