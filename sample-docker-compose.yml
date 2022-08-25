@@ -1,0 +1,64 @@
+version: '3'
+services:
+  go:
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    command: air -c .air.toml
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./gin-clean-architecture-format:/app
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "8080" # このPORTとNginx Proxy Managerの「Dashboard > Proxy Host > Add Proxy Host」の Forwad portを合わせる
+      - "2345:2345"
+    depends_on:
+      - "db"
+    networks:
+      - front
+      - back
+
+  db:
+    image: mysql:5.7
+    container_name: mysql_host # phpMyAdminサービスのPMA_HOSTSに設定する
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: DATABASE
+      MYSQL_USER: USER
+      MYSQL_PASSWORD: PASSWORD
+      TZ: 'Asia/Tokyo'
+      LC_ALL: 'ja_JP.UTF-8'
+      LANG: "ja_JP.UTF-8"
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
+    networks:
+      - back
+
+  # phpMyAdmin
+  phpmyadmin:
+    container_name: test_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=mysql_host
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    ports:
+      - "8081:80"
+    networks:
+      - back
+
+volumes:
+  db-data:
+    driver: local
+networks:
+  front: # docker network create front
+    external: true
+  back: # docker network create back
+
