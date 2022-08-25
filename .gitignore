@@ -135,3 +135,5 @@ gin-clean-architecture-format/tmp/*.log
 gin-clean-architecture-format/config.ini
 .env
 docker-compose.yml
+nginx-proxy/data
+nginx-proxy/mysql
