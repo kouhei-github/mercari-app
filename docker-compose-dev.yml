@@ -1,0 +1,63 @@
+version: '3'
+services:
+  go:
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    command: air -c .air.toml
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./gin-clean-architecture-format:/app
+    ports:
+      - "80:8080"
+    depends_on:
+      - "db"
+
+  node:
+    build:
+      context: .
+      dockerfile: ./docker/front/Dockerfile
+    volumes:
+      - ./nuxt-dashboard:/src
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - '3000:3000'
+      - '24678:24678' # 追加
+    command: yarn dev
+
+  db:
+    image: mysql:5.7
+    container_name: mysql_host # phpMyAdminサービスのPMA_HOSTSに設定する
+    environment:
+      MYSQL_ROOT_PASSWORD: ${ROOTPASS}
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_USER: ${USERNAME}
+      MYSQL_PASSWORD: ${USERPASS}
+      TZ: 'Asia/Tokyo'
+      LC_ALL: 'ja_JP.UTF-8'
+      LANG: "ja_JP.UTF-8"
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
+
+  # phpMyAdmin
+  phpmyadmin:
+    container_name: test_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=mysql_host
+      - PMA_USER=root
+      - PMA_PASSWORD=${ROOTPASS}
+    ports:
+      - "8081:80"
+
+volumes:
+  db-data:
+    driver: local
