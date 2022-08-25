@@ -48,3 +48,4 @@ networks:
 
 # 参考
 # https://qiita.com/nnnue/items/621e5ffebb2f6589e4c5
+# セキュリティグループ(ファイアーオール)をカスタムTCPで81番PORTを0.0.0.0/0で開けておく
