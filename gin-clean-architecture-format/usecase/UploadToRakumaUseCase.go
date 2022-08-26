@@ -88,6 +88,13 @@ func (_self *UploadToRakumaUseCase) Handle() error {
 		if err != nil {
 			return err
 		}
+		var deleteInterface service.Delete
+		deleteInterface = &service.Image{FileName: filePath}
+		err = deleteInterface.Delete()
+		if err != nil {
+			return err
+		}
+
 		fmt.Println("DOne")
 		//repository.Upload(repository.MerchandiseEntity{}, &MyStruct{})
 	}
